@@ -44,7 +44,7 @@ router.post('/', (req, res, next) => {
 // [POST] '/api/creatures/:id/creatureTypes'
 router.post('/', logger, validateCreatureName, validateCreatureId, (req, res, next) => {
     const creatureId = {...req.body, creatureType_id: req.params.id}
-    Creature.insert(creatureId)
+    CreatureType.insert(creatureId)
     .then(creatureType => {
         res.status(201).json(creatureType)
     })
