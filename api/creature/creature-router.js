@@ -1,5 +1,9 @@
 const express = require('express')
-//middleware line
+const {logger, 
+    validateCreatureId, 
+    validateCreatureName, 
+    validateCreatureTypeName
+} = require('./creature-middleware')
 const Creature = require('./creature-model')
 const CreatureType = require('../creature-types/creatureType-model')
 
