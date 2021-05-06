@@ -8,8 +8,7 @@
     "server": "nodemon index.js",
     "migrate": "knex migrate:latest",
     "rollback": "knex migrate:rollback",
-    "seed": "knex seed:run",
-    "heroku-postbuild": "cd client && npm i && npm run build"
+    "seed": "knex seed:run"
   },
   "keywords": [],
   "author": "",
