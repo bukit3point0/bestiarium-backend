@@ -4,7 +4,7 @@ module.exports = {
     get,
     getById,
     insert,
-    // getCreatureTypes,
+    getCreatureTypes,
     update,
     remove
 }
@@ -25,6 +25,13 @@ function insert(creature) {
     .then(id => {
         return getById(id[0])
     })
+}
+
+function getCreatureTypes(creatureId) {
+    return db('creatureTypes as t')
+    .join('creatures as c', 'c.id', 't.creatureType_id')
+    .select('t.id', 't.*', 'c.name as creature')
+    .where('t.creatureType_id', creatureId)
 }
 
 function update(id, edits) {
