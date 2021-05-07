@@ -73,4 +73,9 @@ async function validateCreatureTypeName(req, res, next) {
     }
 }
 
-module.exports = {logger, validateCreatureId, validateCreatureName, validateCreatureTypeName}
+module.exports = {
+    logger, 
+    validateCreatureId, 
+    validateCreatureName, 
+    validateCreatureTypeName
+}
